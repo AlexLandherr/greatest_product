@@ -18,20 +18,8 @@ namespace func {
         }
         num_str = str_stream.str();
 
-        //Check removal of newline '\n' characters from input file string 'num_str'.
-        /* std::cout << "Size before: " << num_str.size() << '\n';
-        if (num_str.find('\n') != std::string::npos) {
-            std::cout << "There are newlines before!" << '\n';
-        } else {
-            std::cout << "There are no newlines before!" << '\n';
-        } */
+        //Removing '\n' characters from 'num_str'.
         num_str.erase(std::remove(num_str.begin(), num_str.end(), '\n'), num_str.cend());
-        /* std::cout << "Size after: " << num_str.size() << '\n';
-        if (num_str.find('\n') != std::string::npos) {
-            std::cout << "There are newlines after!" << '\n';
-        } else {
-            std::cout << "There are no newlines after!" << '\n';
-        } */
 
         return num_str;
     }
