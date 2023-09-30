@@ -11,9 +11,8 @@ Find the thirteen (13) adjacent digits in the 1000-digit number that have the gr
 */
 
 int main() {
-    std::string num_str = func::txt_file_to_str("prob8.txt");
-
-    std::cout << num_str.substr(0, 13) << '\n';
+    std::cout << "The thirteen (13) adjacent digits in the 1000-digit number that have the greatest product is:" << '\n';
+    std::cout << func::find_greatest_product(func::txt_file_to_str("prob8.txt"), 13) << '\n';
 
     return 0;
 }
